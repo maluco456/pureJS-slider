@@ -1,0 +1,339 @@
+h2{
+    font-size: $fontSizeTitle;
+    padding-top: 0;
+    padding-bottom: 31px;
+    font-family: "Verdana",sans-serif;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+p{
+    font-size: $fontSizeBase;
+    color:$default-text-color;
+}
+.banner-top{
+    width:100%;
+    display: block;
+    background: url("../images/topBg.jpg") repeat-x center transparent;
+    padding-top: 35px;
+    height: 600px;
+    @media #{$apenas-xs}{
+        padding-top: 0;
+    }
+
+    .bannerTitle{
+        font-size: 72px;
+        font-family: "Pacifico", sans-serif;
+        color:#fff;
+        text-shadow: 0px 4px 0px $shadow-color;
+        margin:50px 0;
+    }
+    .bannerText{
+        font-size:$fontSizeTestimonial;
+        color:#fff;
+        text-shadow: 0px 3px 0px $shadow-color;
+
+    }
+    .app-list{
+        padding: 0;
+        .app-platforms{
+            display: inline-block;
+            background:#000;
+            margin-right:$gutter;
+            @include border-radius(30px);
+            width: 56px;
+            height: 56px;
+            padding: 15px 17px;
+            opacity: .4;
+            @extend .transition;
+            cursor: pointer;
+            &:hover{
+                opacity: 1;
+            }
+            a>i{
+                color:#FFF;
+                font-size:26px;
+            }
+        }
+    }
+
+}
+.features{
+    div{
+        &.itemFeature{
+            position:relative;
+            padding-top: 50px;
+            padding-bottom: 60px;
+            border-bottom: 1px solid transparent;
+            @media #{$apenas-xs}{
+                border-bottom: 1px solid transparent;
+            }
+
+            &:before{
+                width: 1px;
+                display: block;
+                background-color:#666;
+                height:100px;
+            }
+        }
+        &.mainMsg{
+            margin-bottom: 40px;
+        }
+    }
+    .border-bottom{
+        @media #{$acima-sm}{
+            border-bottom: 1px solid $default-border-color;
+            margin:0 auto;
+            width: 95%;
+        }
+    }
+    .border-right{
+        @media #{$acima-sm}{
+            border-right: 1px solid $default-border-color;
+            float: right;
+            display: block;
+            height: 80%;
+            width: 1px;
+            //background-color: $default-border-color;
+            position: absolute;
+            right: -17px;
+            top: 10%;
+        }
+     }
+    .screenIcon{
+        width: 52px;
+        height: 52px;
+        background: url("../images/iconsSprite.png") 0 -76px no-repeat transparent;
+        display: block;
+        margin:0 auto;
+    }
+    .targetIcon{
+        width: 52px;
+        height: 52px;
+        background: url("../images/iconsSprite.png") -103px -75px no-repeat transparent;
+        display: block;
+        margin:0 auto;
+    }
+    .photoIcon{
+        width: 52px;
+        height: 52px;
+        background: url("../images/iconsSprite.png") -52px -75px no-repeat transparent;
+        display: block;
+        margin:0 auto;
+
+    }
+    .paletteIcon{
+        width: 52px;
+        height: 52px;
+        background: url("../images/iconsSprite.png") 0px -129px no-repeat transparent;
+        display: block;
+        margin:0 auto;
+    }
+    .userIcon{
+        width: 52px;
+        height: 52px;
+        background: url("../images/iconsSprite.png") -50px -129px no-repeat transparent;
+        display: block;
+        margin:0 auto;
+    }
+    .gearIcon{
+        width: 52px;
+        height: 52px;
+        background: url("../images/iconsSprite.png") -105px -129px no-repeat transparent;
+        display: block;
+        margin:0 auto;
+    }
+}
+.about{
+
+    h2{
+        margin-bottom: 0;
+        padding-bottom: 30px;
+        padding-top: 0;
+        margin-top: 10px;
+    }
+    ul>li{
+        &:before{
+            content:"\F105";
+            font-family: "FontAwesome";
+            font-weight: bold;
+            font-size: $fontSizeBase;
+            margin-right: 15px;
+            color:$darker-color;
+        }
+    }
+
+}
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    height: auto;
+}
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.testimonials-slider-holder{
+    blockquote{
+        border:none;
+        //margin:0 auto;
+        cite{
+            font-size: $fontSizeTestimonial;
+            line-height: $testimonialLineHeight;
+            width: 100%;
+            display:block;
+            margin-bottom: 25px;
+        }
+        .authorCite{
+            font-size: $testimonialAuthorFontSize;
+            line-height:$testimonialAuthorLineHeight;
+            font-weight: 500;
+            color:$darker-color;
+        }
+    }
+}
+.pricing-header{
+    h2{
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-top: 0;
+        margin-bottom: 25px;
+    }
+}
+.prices{
+    @media #{$acima-md}{
+        max-height: 690px;
+        margin-bottom: 50px;
+    }
+    .pricing-holder{
+        margin-top: 35px;
+        @media #{$acima-sm}{
+            display:flex;
+            align-items: center;
+        }
+
+        h2{
+            padding-top: 0;
+            padding-bottom: 0;
+            margin-top: 0;
+            margin-bottom: 25px;
+        }
+        .pricing-box-holder{
+            @media #{$acima-xs}{
+                padding-right: 5px !important;
+                padding-left: 5px !important;
+            }
+        }
+        .pricing-box{
+            background-color:#fff;
+            margin-bottom: $gutter;
+            .plan-title{
+                background-color:$blue;
+                color:#fff;
+                padding-top: 18px;
+                padding-bottom: 18px;
+                font-size: $pricingBoxTitle;
+            }
+            span{
+                width: 100%;
+                display: block;
+                font-size:$priceSize;
+                font-weight: 500;
+                sup{
+                    font-size:$priceSizeSmall;
+                    margin-left:-10px;
+                }
+            }
+            ul{
+                padding: 0;
+                li{
+                    border-top:1px solid $default-border-color;
+                    padding-bottom: 14px;
+                    padding-top: 14px;
+                }
+            }
+            .purchase-holder{
+                width: 100%;
+                background-color: $blue;
+                text-align: center;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                button{
+                    padding:16px 30px 14px;
+                    font-weight:bold;
+                    color:#fff;
+                    background-color:$default-button-bg;
+                    border:none;
+                    font-size:15px;
+                }
+            }
+        }
+    }
+}
+
+.social-media-holder{
+    h2{
+        text-align: center;
+    }
+    p{
+        text-align: center;
+        margin-bottom: 27px;
+        font-size: $fontSizeBase;
+    }
+    .social-media{
+        text-align: center;
+        padding: 0;
+        .icon{
+
+            display: inline-block;
+            background:#d4d4d4;
+            @include border-radius(15px);
+            padding: 6px 6px;
+            text-align: center;
+            width: 32px;
+            height: 32px;
+            margin-left: 10px;
+            @extend .transition;
+            &:hover{
+                background-color:$blue;
+            }
+            a>i:before{
+                color:#fff;
+                font-size: 19px;
+            }
+        }
+    }
+}
+
+footer{
+    padding-top: 60px;
+    padding-bottom: 59px;
+    nav{
+        ul{
+            padding: 0;
+            width:100%;
+            text-align: center;
+            li{
+                display: inline-block;
+                margin-right: 38px;
+                @media #{$apenas-xs}{
+                    display: list-item;
+                    margin-bottom: 10px;
+                    margin-right:0;
+                }
+                a{
+                    color:$default-text-color;
+                    font-size: $fontSizeBase;
+                }
+
+            }
+        }
+    }
+}

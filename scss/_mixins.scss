@@ -1,0 +1,33 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+//mudando cor do svg usado como background de um elemento
+@mixin placeholder-color($color) {
+  &::-webkit-input-placeholder { /* WebKit browsers */
+      color: $color;
+  }
+  &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color: $color;
+  }
+  &::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color: $color;
+  }
+  &:-ms-input-placeholder { /* Internet Explorer 10+ */
+      color: $color;
+  }
+}
+
+@mixin box-shadow($color){
+  -webkit-box-shadow: 0 0 28px 0 $color;
+  -moz-box-shadow:    0 0 28px 0 $color;
+  box-shadow:         0 0 28px 0 $color;
+}
+
+@mixin btn-shadow($size, $color){
+    -webkit-box-shadow: 0 $size 0 0 $color;
+    -moz-box-shadow: 0 $size 0 0 $color;
+    box-shadow: 0 $size 0 0 $color;
+}

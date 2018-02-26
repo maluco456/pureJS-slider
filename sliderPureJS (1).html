@@ -1,0 +1,173 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+  <style type="text/css">
+  @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);  
+	html {
+	  border-top: 5px solid #fff;
+	  background: #58DDAF;
+	  color: #2a2a2a;
+	}
+	html, body {
+	  margin: 0;
+	  padding: 0;
+	  font-family: 'Open Sans';
+	}
+	h1 {
+	  color: #fff;
+	  text-align: center;
+	  font-weight: 300;
+	}
+	#slider {
+	  position: relative;
+	  overflow: hidden;
+	  margin: 20px auto 0 auto;
+	  border-radius: 4px;  
+	  width: 100%
+	}
+
+	#slider ul {
+	  position: relative;
+	  margin: 0;
+	  padding: 0;
+	  height: 300px;
+	  list-style: none;
+	  -webkit-transition:all 1.0s ease-in-out;
+	  -moz-transition:all 1.0s ease-in-out;
+	  -o-transition:all 1.0s ease-in-out;
+	  transition:all 1.0s ease-in-out;
+	}
+
+	#slider ul li {
+	  position: relative;
+	  display: block;
+	  float: left;
+	  margin: 0;
+	  padding: 0;
+	/*  width: 500px;*/
+	  height: 300px;
+	  background: #ccc;
+	  text-align: center;
+	  line-height: 300px;
+	}
+
+	a.control_prev, a.control_next {
+	  position: absolute;
+	  top: 40%;
+	  z-index: 999;
+	  display: block;
+	  padding: 4% 3%;
+	  width: auto;
+	  height: auto;
+	  background: #2a2a2a;
+	  color: #fff;
+	  text-decoration: none;
+	  font-weight: 600;
+	  font-size: 18px;
+	  opacity: 0.8;
+	  cursor: pointer;
+	}
+
+	a.control_prev:hover, a.control_next:hover {
+	  opacity: 1;
+	  -webkit-transition: all 0.2s ease;
+	}
+
+	a.control_prev {
+	  border-radius: 0 2px 2px 0;
+	}
+
+	a.control_next {
+	  right: 0;
+	  border-radius: 2px 0 0 2px;
+	}
+
+	.slider_option {
+	  position: relative;
+	  margin: 10px auto;
+	  width: 160px;
+	  font-size: 18px;
+	}
+  	
+  </style>
+  
+</head>
+<body>
+<h1>Incredibly Basic Slider</h1>
+<div id="slider">
+	<ul id="carrousel">
+		<li>SLIDE 1</li>
+		<li style="background: #aaa;">SLIDE 2</li>
+		<li>SLIDE 3</li>
+		<li style="background: #aaa;">SLIDE 4</li>
+	</ul>  
+</div>
+</body>
+<script type="text/javascript">
+	
+	function createSlider(id){
+
+		this.slider= document.getElementById(id),
+		this.positionInfo = slider.getBoundingClientRect(),
+		this.sliderHeight = positionInfo.height,
+		this.sliderWidth = positionInfo.width,
+		this.sliderContainerWidth = parseInt(document.getElementById(id).offsetWidth),
+		this.ul = document.getElementById("carrousel"),
+	    this.ulLength = ul.children.length,
+	    this.i = 0,
+	    this.index = 1;
+
+
+	    this.setUlWidth = function(){
+	    	this.ul.style.width = (this.sliderContainerWidth * this.ulLength) + 'px';
+	    	//ul.style.width = '3500px';
+
+	    }
+	    this.setLiWidth = function(){
+			for( i; i < this.ulLength; i++ ){
+				this.ul.children[i].style.width = this.sliderContainerWidth  + 'px';
+			}
+		}
+
+		this.showSlides(n);
+
+		this.plusSlides = function(n) {
+		    showSlides(index += n);
+		}
+		this.currentSlide = function(n) {
+		    showSlides(index = n);
+		}
+		this.showSlides = function(n) {
+			//container.style.transform = "translateX("+container.index * -450+"px)"
+		    var i;
+		    if (n > slides.length) {index = 1}
+		    if (n < 1) {index = slides.length}
+		    for (i = 0; i < slides.length; i++) {
+		        slides[i].style.display = "none";
+		    }
+		    slides[index-1].style.display = "block";
+		    slides[index-1].style.opacity = 1;
+		}
+
+		setUlWidth();
+		setLiWidth();
+	}
+	createSlider('slider');
+
+
+
+
+  </script>
+</html>

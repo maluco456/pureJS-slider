@@ -1,0 +1,50 @@
+//tamanhos textos
+$fontSizeBase: 16px;
+$fontSizeMaior:$fontSizeBase+3;
+$fontSizeTitle:30px;
+$fontSizeSubtitle:30px;
+$line-height:26px;
+$fontSizeTestimonial:24px;
+
+$testimonialLineHeight:32px;
+$testimonialAuthorFontSize:18px;
+$testimonialAuthorLineHeight:18px;
+
+$pricingBoxTitle:28px;
+$priceSize:42px;
+$priceSizeSmall:24px;
+
+//padrões
+$gutter: 15px;
+
+/**
+ * Resoluções
+ */
+$apenas-xs: "(max-width: 765px)";
+$entre-xs-sm: "(min-width: 426px) and (max-width: 764px)";
+$apenas-sm: "(min-width: 768px) and (max-width: 991px)";
+$abaixo-md: "(max-width: 991px)";
+$apenas-md: "(min-width: 992px) and (max-width: 1199px)";
+$apenas-lg: "(min-width: 1200px)";
+$acima-sm:  "(min-width: 769px)";
+$acima-md:  "(min-width: 992px)";
+$acima-xs: "(min-width:766px)";
+
+
+/**
+cores
+*/
+$bg-default:#fff;
+$default-color:#222222;
+$default-gray-bg:#e7e7e7;
+$default-button-bg:#0d74b9;
+$default-border-color:#c2c2c2;
+$default-title-color:#000;
+$default-text-color:#848484;
+$error-color:#ff2d55;
+$darker-color:#222222;
+$blue:#3498db;
+$orange:#ffcc00;
+$red:#ff2d55;
+$footer-bgcolor:#e3e3e3;
+$shadow-color:#2772a4;
