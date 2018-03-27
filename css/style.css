@@ -447,7 +447,7 @@ footer {
       background: #ccc;
       text-align: center;
       line-height: 300px; }
-  #slider a.control_prev, #slider a.control_next {
+  #slider a.prev, #slider a.next {
     position: absolute;
     top: 40%;
     z-index: 999;
@@ -462,14 +462,30 @@ footer {
     font-size: 18px;
     opacity: 0.8;
     cursor: pointer; }
-    #slider a.control_prev:hover, #slider a.control_next:hover {
+    #slider a.prev:hover, #slider a.next:hover {
       opacity: 1;
       -webkit-transition: all 0.2s ease; }
-  #slider .control_prev {
+  #slider .prev {
     border-radius: 0 2px 2px 0; }
-  #slider .control_next {
+  #slider .next {
     right: 0;
     border-radius: 2px 0 0 2px; }
+  #slider .dots-holder {
+    width: 100%;
+    float: left;
+    text-align: center; }
+    #slider .dots-holder .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #fff;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+      border: 2px solid #3498db; }
+    #slider .dots-holder .active, #slider .dots-holder .dot:hover {
+      background-color: #3498db; }
 
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome

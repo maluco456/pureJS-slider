@@ -24,7 +24,7 @@
             line-height: 300px;
         }
     }
-    a.control_prev, a.control_next {
+    a.prev, a.next {
         position: absolute;
         top: 40%;
         z-index: 999;
@@ -44,11 +44,32 @@
             -webkit-transition: all 0.2s ease;
         }
     }
-    .control_prev {
+    .prev {
         border-radius: 0 2px 2px 0;
     }
-    .control_next {
+    .next {
         right: 0;
         border-radius: 2px 0 0 2px;
     }
+    .dots-holder{
+        width: 100%;
+        float: left;
+        text-align: center;
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #fff;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+            border:2px solid $blue;
+        }
+        .active, .dot:hover {
+            background-color: $blue;
+        }
+    }
+
+
 }
